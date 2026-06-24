@@ -365,6 +365,12 @@ body::before {
     border-radius: var(--border-radius);
 }
 
+/* Reserver le ratio des videos grille/avis (posters lazy) pour eviter tout decalage (CLS) */
+.video-grid .video-wrapper video,
+.video-reviews .video-wrapper video {
+    aspect-ratio: 9 / 16;
+}
+
 /* Placeholder de chargement vidéo (lazy loading) */
 .video-placeholder {
     position: absolute;

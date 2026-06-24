@@ -43,6 +43,9 @@ class VideoManager {
                 if (!video || wrapper.dataset.preloaded === 'true') return;
                 
                 wrapper.dataset.preloaded = 'true';
+                if (video.dataset.poster && !video.getAttribute('poster')) {
+                    video.poster = video.dataset.poster;
+                }
                 video.preload = 'auto';
                 video.load();
                 observer.unobserve(wrapper);
