@@ -8,7 +8,7 @@
    Note: Gatwick et Gistesy sont des polices Canva, on utilise des alternatives
    ou @font-face si les fichiers sont fournis
    -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,400&family=Anton&family=DM+Serif+Display:ital@0;1&family=Allura&family=Chau+Philomene+One&display=swap');
+/* Polices chargées via le <link> du <head> (plus rapide qu'un @import render-blocking) */
 
 /* Font-face pour les polices personnalisées (à remplacer si fichiers fournis) */
 @font-face {
@@ -704,7 +704,8 @@ video:focus-visible {
 
 /* Bouton WhatsApp primary (vert) - CTA principal */
 .whatsapp-btn--primary {
-    background: var(--color-whatsapp);
+    /* Vert assombri (#0E8539) pour un contraste AA 4.74:1 avec le texte blanc */
+    background: #0E8539;
     color: var(--color-white);
     padding: 14px 24px;
     border-radius: 50px;
