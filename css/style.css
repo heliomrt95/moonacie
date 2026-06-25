@@ -349,6 +349,11 @@ body::before {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Reserver le ratio de la video d'accueil pour eviter le CLS */
+.video-container .video-wrapper video {
+    aspect-ratio: 16 / 9;
+}
+
 .video-wrapper {
     position: relative;
     width: 100%;
